@@ -5,14 +5,14 @@ const mysql = require('mysql');
 let config = {
     appid: 'wxd29115390c39d130',
     token: 'weixin',
-    encodingAESKey: 'L2BObsKmAmGVWkveoU4HyWGK85BFIQ4zOVpazWpT42C'
+    encodingAESKey: 'wbmu7otn8FST9pot4YgQ8KKoBNXKfeXESfB0j8jWAdQ'
 };
 
 let pool = mysql.createPool({user: 'root'});
 
 let app = new express();
 
-app.post('/', wechat(config, (req, res) => {
+app.all('/', wechat(config, (req, res) => {
     let content = req.weixin.Content;
     console.log(content);
     // 根据 content 查询数据库表 chat
@@ -23,8 +23,10 @@ app.post('/', wechat(config, (req, res) => {
         // 返回 answer
         if (results.length === 1) {
             res.reply(results[0].answer);
+            console.log(results[0].answer);
         } else {
             res.reply('啊？');
+            console.log('啊？');
         }
     });
 }));

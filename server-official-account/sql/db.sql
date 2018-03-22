@@ -14,3 +14,5 @@ INSERT INTO db.chat(question, answer)
 VALUE('你是谁', '我是聊天机器人');
 INSERT INTO db.chat(question, answer)
 VALUE('再见', '再见！');
+
+SELECT * FROM db.chat WHERE question LIKE '%你好啊%';
