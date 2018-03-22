@@ -10,4 +10,5 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <navigator url='../demo/demo' open-type='redirect'>to demo page</navigator>
 </view>

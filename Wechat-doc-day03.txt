@@ -75,5 +75,27 @@ Day03 小程序开发
     *.wxml
     *.wxss
 
+14. 提示：编译 .wxss 文件错误 ...
+    解决：
+    a. 登录用户目录/AppData/Local/微信开发者工具/User Data/WeappVendor
+    b. 删除 wcsc.exe
+    c. 重启开发者工具
+
+15. 小程序页面之间的链接跳转
+    15.1 index.wxml
+         <navigator>to demo page</navigator>
+    15.2 为 navigator 添加属性 url='../demo/demo'
+    15.3 为 navigator 添加属性 open-type='redirect' 重定向
+
+16. 数据绑定
+    16.1 demo.wxml
+         Hello，{{name}}！
+    16.2 demo.js
+         Page({
+            data: {
+                name: 'weapp'
+            }
+         });
+
 
 
