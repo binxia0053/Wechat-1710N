@@ -45,6 +45,35 @@ Day03 小程序开发
    project.config.json 文件：项目的开发设置
 
 9. 练习：创建一个新的页面 test
+    9.1 pages 右键-新建-目录：test
+    9.2 test/ 右键-新建：test.js *
+    9.3 test/ 右键-新建：test.wxml *
+    9.4 test/ 右键-新建：test.wxss
+    9.5 test/ 右键-新建：test.json
+    9.6 app.json
+        "pages": [
+            ...,
+            "pages/test/test"
+        ]
+
+10. 项目的首页是 app.json 中，pages 数组的第一个元素
+
+11. 快速创建页面的方法（推荐）
+    app.json
+    添加 pages 数组的元素
+    "pages": [
+        ...,
+        "pages/demo/demo"
+    ]
+    保存 app.json
+
+12. format: Shift + Alt + F
+
+13. <text></text>
+    HTML 中没有这个标记
+    微信小程序新的标记
+    *.wxml
+    *.wxss
 
 
 
