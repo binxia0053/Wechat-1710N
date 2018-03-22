@@ -16,7 +16,7 @@ Day02 公众号开发
 3. server-official-account/
    cmd: npm i -S express
 
-—— 以上无网络，下载解压：FTP/22-wechat/day01/wechat-1710N.zip
+—— 以上操作如无网络，下载解压：FTP/22-wechat/day01/wechat-1710N.zip
 
 4. server-official-account/
    创建 app.js，搭建一个简单的 web 服务器
@@ -48,7 +48,11 @@ Day02 公众号开发
 
 8. app.js
    const wechat = require('wechat');
-   let config = {};
+   let config = {
+        appid: '',
+        token: '',
+        encodingAESKey: ''
+   };
 
 9. 微信公众平台 - 登录个人订阅号账号
    开发 - 基本配置
@@ -78,7 +82,7 @@ Day02 公众号开发
 
 15. 手机微信里，向自己的订阅号发送任意消息，观察服务器输出
 
-16. 如果订阅号服务在接收到消息后，没有响应，微信服务器会重发两次消息，最后向用户发送消息：该公众号提供的服务出现故障，请稍后再试
+16. 如果订阅号服务器在接收到消息后，没有返回响应，微信服务器会再重发两次消息，最后向用户发送消息：该公众号提供的服务出现故障，请稍后再试
 
 17. 返回响应
     res.reply('text');
@@ -86,6 +90,17 @@ Day02 公众号开发
 18. 模拟编辑模式的关键词半匹配回复？
     -> JavaScript | HTML | CSS
     -> http://...
+
+19. 聊天机器人
+    用户向订阅号发送消息
+    服务器端接受消息
+    服务器根据接受的消息返回响应
+
+20. server-official-account/
+    cmd: npm i -S mysql
+
+21. server-official-account/
+    创建文件 sql/db.sql
 
 
 

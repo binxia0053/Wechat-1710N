@@ -4,19 +4,19 @@ const wechat = require('wechat');
 let config = {
     appid: 'wxd29115390c39d130',
     token: 'weixin',
-    encodingAESKey: 'LufgXDb9ZM2dKRXHNCN0DlAZn2yL05mKh3n3X1xNcQy'
+    encodingAESKey: 'L2BObsKmAmGVWkveoU4HyWGK85BFIQ4zOVpazWpT42C'
 };
 
 let app = new express();
 
 app.post('/', wechat(config, (req, res) => {
-    let message = req.weixin.Content;
-    console.log(message);
-    if (message.includes('JavaScript')) {
+    let content = req.weixin.Content;
+    console.log(content);
+    if (content.includes('JavaScript')) {
         res.reply('JS...');
-    } else if (message.includes('HTML')) {
+    } else if (content.includes('HTML')) {
         res.reply('HTML...');
-    } else if (message.includes('CSS')) {
+    } else if (content.includes('CSS')) {
         res.reply('CSS...');
     } else {
         res.reply('收到');
