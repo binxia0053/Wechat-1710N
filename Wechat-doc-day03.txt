@@ -32,5 +32,19 @@ Day03 小程序开发
    7.4 填写项目名
    7.5 选择建立普通快速启动模板
 
+8. 小程序的项目结构
+   * pages/ 目录：小程序的所有页面
+        index/ 目录：index 页面的所有文件
+            * index.js: index 页面的业务逻辑（JS）
+            * index.wxml: index 页面的内容 （html）
+            index.wxss: index 页面的样式 （css）
+            index.json: index 页面的设置
+   * app.js 文件：小程序的业务逻辑
+   * app.json 文件：小程序的公共设置
+   app.wxss 文件：小程序公共样式
+   project.config.json 文件：项目的开发设置
+
+9. 练习：创建一个新的页面 test
+
 
 
