@@ -9,8 +9,8 @@ let config = {
 
 let app = new express();
 
-app.get('/', wechat(config, (req, res) => {
-    let message = req,weixin;
+app.post('/', wechat(config, (req, res) => {
+    let message = req.weixin;
     console.log(message);
 }));
 

@@ -36,6 +36,13 @@ Day02 公众号开发
    C:/ngrok.exe
    C:/ cmd: ngrok.exe http 3000
 
+   MAC
+   https://ngrok.com/download
+   ngrok.zip
+   ngrok
+   ~/Download/
+   ./ngrok http 3000
+
 7. server-official-account/
    cmd: npm i -S wechat
 
@@ -57,7 +64,7 @@ Day02 公众号开发
 11. 复制 ngrok 生成的隧道地址，填写到公众平台的 URL 处
 
 12. app.js
-    app.get('/', wechat(config, (req, res) => {
+    app.post('/', wechat(config, (req, res) => {
         let message = req.weixin;
         console.log(message);
     }));
@@ -69,7 +76,7 @@ Day02 公众号开发
 14. 启用开发者模式
     服务器配置(已启用)
 
-15.
+15. 手机微信里，向自己的订阅号发送任意消息，观察服务器输出
 
 
 
