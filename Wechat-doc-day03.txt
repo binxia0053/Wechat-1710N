@@ -157,7 +157,12 @@ Day03 小程序开发
 
 28. let url = `http://...location=${this.data.city}...`;
 
-29.
+29. wx.request({
+        url: '',
+        success: function(res) {
+            console.log(res);
+        }
+    });
 
 
 
