@@ -28,6 +28,8 @@ Day02 公众号开发
 6. 隧道服务
    cmd: npm i -g ngrok
    https://ngrok.com/download
+   C:/ngrok.exe
+   C:/ cmd: ngrok.exe http 3000
 
 
 
