@@ -18,8 +18,8 @@ app.all('/', wechat(config, (req, res) => {
     // 根据 content 查询数据库表 chat
     let sql = `SELECT *
                 FROM db.chat
-                WHERE question LIKE ?`;
-    pool.query(sql, ['%' + content + '%'], (err, results) => {
+                WHERE ? LIKE CONCAT('%', question, '%')`;
+    pool.query(sql, [content], (err, results) => {
         // 返回 answer
         if (results.length === 1) {
             res.reply(results[0].answer);

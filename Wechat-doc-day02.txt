@@ -106,7 +106,8 @@ Day02 公众号开发
     const mysql = require('mysql');
     let pool = mysql.createPool({user: 'root'});
 
-23.
+23. let sql = 'SELECT * FROM db.chat WHERE ? like concat('%', question, '%')';
+    pool.query(sql, [content], (err, results)=>{// ...});
 
 
 
