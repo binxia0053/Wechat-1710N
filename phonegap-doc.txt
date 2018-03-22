@@ -1,0 +1,10 @@
+
+PhoneGap
+
+1. 开发移动应用的技术
+
+2. 官网：https://phonegap.com
+
+3. Build amazing mobile apps powered by open web tech.
+
+4. PhoneGap 和 Ionic 的区别？
