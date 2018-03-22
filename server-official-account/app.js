@@ -11,7 +11,8 @@ let app = new express();
 
 app.post('/', wechat(config, (req, res) => {
     let message = req.weixin;
-    console.log(message);
+    console.log(message.Content);
+    res.reply('收到。');
 }));
 
 app.listen(3000);
