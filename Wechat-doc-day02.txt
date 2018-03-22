@@ -1,0 +1,34 @@
+Wechat 开发
+
+Day02 公众号开发
+
+1. 开发者模式
+
+2. 使用 Node.js 和 Express 搭建一个简单的服务器
+	2.1 创建目录 Wechat-1710N
+
+	2.2 Wechat-1710N/ 创建目录
+	    server-official-account
+
+	2.2 server-official-account/
+	    cmd: npm init
+
+3. server-official-account/
+   cmd: npm i -S express
+
+4. server-official-account/
+   创建 app.js，搭建一个简单的 web 服务器
+	const express = require('express');
+	let app = new express();
+	app.listen(3000);
+
+5. server-official-account/
+   cmd: node app | supervisor app
+
+6. 隧道服务
+   cmd: npm i -g ngrok
+   https://ngrok.com/download
+
+
+
+22-wechat/day01/wechat-1710N.zip
