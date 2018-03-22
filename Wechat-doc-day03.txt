@@ -124,6 +124,20 @@ Day03 小程序开发
     <button bindtap='query'>query weather</button>
 
 22. https://heweather.com/
+    key: fa66a4c393974639bcb6f2c06bf504b8
+    https://free-api.heweather.com/s6/weather/now?location=beijing&key=fa66a4c393974639bcb6f2c06bf504b8
+
+23. input 添加属性 bindinput='getCity'
+
+24. weather.js
+    ...,
+    getCity: function() {
+        console.log('input...');
+    },
+
+25. getCity: function(event) {
+        console.log(event);
+    }
 
 
 
