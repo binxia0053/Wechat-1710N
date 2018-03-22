@@ -97,5 +97,34 @@ Day03 小程序开发
             }
          });
 
+17. 事件处理
+    17.1 demo.wxml
+         <button type='primary'>button</button>
+    17.2 添加属性 bindtap='testTap'
+    17.3 demo.js
+         testTap: function() {
+            console.log('test tap...');
+         }
+
+18. 点击按钮，改变 text 中的文本内容
+    function() {
+        this.setData({
+            key: 'new value'
+        });
+    }
+
+19. 获取 data 值
+    this.data.key
+
+20. 新建页面 weather，设置为首页
+
+21. weather.wxml
+    <text>{{weather}}</text>
+    <input placeholder="input city name"></input>
+    <button bindtap='query'>query weather</button>
+
+22. https://heweather.com/
+
+
 
 
