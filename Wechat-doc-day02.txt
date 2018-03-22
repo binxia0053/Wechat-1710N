@@ -102,5 +102,11 @@ Day02 公众号开发
 21. server-official-account/
     创建文件 sql/db.sql
 
+22. app.js
+    const mysql = require('mysql');
+    let pool = mysql.createPool({user: 'root'});
+
+23.
+
 
 
