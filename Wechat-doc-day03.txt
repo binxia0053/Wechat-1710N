@@ -171,6 +171,17 @@ Day03 小程序开发
     30.2 开发时：project.config.json
          "urlCheck": false
 
+31. let weather = res.data.HeWeather6[0].now.cond_txt;
+
+32. let page = this;
+    wx.request({
+        // ...
+        page.setData({
+            weather: weather
+        });
+        // ...
+    });
+
 
 
 
