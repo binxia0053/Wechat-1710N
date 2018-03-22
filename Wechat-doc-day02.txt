@@ -36,6 +36,40 @@ Day02 公众号开发
    C:/ngrok.exe
    C:/ cmd: ngrok.exe http 3000
 
+7. server-official-account/
+   cmd: npm i -S wechat
+
+8. app.js
+   const wechat = require('wechat');
+   let config = {};
+
+9. 微信公众平台 - 登录个人订阅号账号
+   开发 - 基本配置
+   复制 AppId，粘贴为 config 的 appid 值
+
+10. 开发 - 基本配置
+    服务器配置(未启用) - 修改配置
+    10.1 token: weixin
+         设置 config 的 token 值为 weixin
+    10.2 生成 EncodingAESKey
+         设置 config 的 encodingAESKey 值为生成值
+
+11. 复制 ngrok 生成的隧道地址，填写到公众平台的 URL 处
+
+12. app.js
+    app.get('/', wechat(config, (req, res) => {
+        let message = req.weixin;
+        console.log(message);
+    }));
+
+13. 开发 - 基本配置
+    服务器配置(未启用) - 修改配置
+    提交
+
+14. 启用开发者模式
+    服务器配置(已启用)
+
+15.
 
 
 
