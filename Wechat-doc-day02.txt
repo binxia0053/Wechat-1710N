@@ -16,6 +16,8 @@ Day02 公众号开发
 3. server-official-account/
    cmd: npm i -S express
 
+—— 以上无网络，下载解压：FTP/22-wechat/day01/wechat-1710N.zip
+
 4. server-official-account/
    创建 app.js，搭建一个简单的 web 服务器
 	const express = require('express');
@@ -24,13 +26,16 @@ Day02 公众号开发
 
 5. server-official-account/
    cmd: node app | supervisor app
+   supervisor: npm i -g supervisor
 
 6. 隧道服务
    cmd: npm i -g ngrok
+   ngrok http 3000
+
    https://ngrok.com/download
    C:/ngrok.exe
    C:/ cmd: ngrok.exe http 3000
 
 
 
-22-wechat/day01/wechat-1710N.zip
+
