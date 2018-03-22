@@ -10,9 +10,17 @@ let config = {
 let app = new express();
 
 app.post('/', wechat(config, (req, res) => {
-    let message = req.weixin;
-    console.log(message.Content);
-    res.reply('收到。');
+    let message = req.weixin.Content;
+    console.log(message);
+    if (message.includes('JavaScript')) {
+        res.reply('JS...');
+    } else if (message.includes('HTML')) {
+        res.reply('HTML...');
+    } else if (message.includes('CSS')) {
+        res.reply('CSS...');
+    } else {
+        res.reply('收到');
+    }
 }));
 
 app.listen(3000);
