@@ -30,6 +30,22 @@ Day04 小程序开发
 
 9. 实现数据的快速导出
 
+10. MySQL 函数
+    INET_ATON
+    INET_NTOA
+
+    INET internet
+    A address
+    TO to
+    N number
+
+    SELECT *
+    FROM db.ip
+    WHERE INET_ATON('用户输入的 IP')
+    BETWEEN INET_ATON(min) AND INET_ATON(max);
+
+11 小程序中创建新的页面 ip，设为首页
+
 
 
 
