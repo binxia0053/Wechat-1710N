@@ -83,6 +83,17 @@ Day04 小程序开发
     
     longitude='{{longitude}}'
 
+17. markers: [
+        {
+            longitude: ,
+            latitude: ,
+            iconPath: '/resources/img/...',
+            width: ,
+            height: ,
+        }
+    ]
+
+
 
 
 
