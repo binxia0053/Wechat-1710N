@@ -44,7 +44,34 @@ Day04 小程序开发
     WHERE INET_ATON('用户输入的 IP')
     BETWEEN INET_ATON(min) AND INET_ATON(max);
 
-11 小程序中创建新的页面 ip，设为首页
+11. 小程序中创建新的页面 ip，设为首页
+    <text>{{loc}}<text>
+    <input></input>
+    <button bindtap='query'></button>
+
+12. <input bindinput='getIp'></input>
+
+13. ip.js
+    getIp: function(event) {
+        this.setData({
+            ip: event.detail.value
+        });
+    }
+
+    query: function () {
+        let ip = this.data.ip;
+        let url = '';
+        wx.request({
+            url: url,
+            success: function (res) {
+                // ...
+            }
+        });
+    }
+
+14. server-ip/
+    app.js
+
 
 
 

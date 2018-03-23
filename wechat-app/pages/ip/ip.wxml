@@ -1,0 +1,4 @@
+<!--pages/ip/ip.wxml-->
+<text>{{loc}}</text>
+<input placeholder='请输入 IP 地址' bindinput='getIp'></input>
+<button type='primary' bindtap='query'>查询</button>

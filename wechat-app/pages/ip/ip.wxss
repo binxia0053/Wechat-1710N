@@ -1,0 +1,16 @@
+/* pages/ip/ip.wxss */
+
+text, input {
+  display: block;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+}
+
+text {
+  background: #ddd;
+}
+
+input {
+  background: #ff0;
+}
