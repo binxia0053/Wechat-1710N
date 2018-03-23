@@ -16,7 +16,7 @@ Day04 小程序开发
     IPv4
     IPv6
 
-5.  文件中的数据存入 MySQL 数据库，建库建表
+5.  server-ip/sql/db.sql 建库建表
 
 6.  server-ip/
     cmd: npm init
