@@ -72,6 +72,17 @@ Day04 小程序开发
 14. server-ip/
     app.js
 
+15. 创建新的页面：map
+    <map></map>
+
+    height: 100vh
+
+16. longitude: 经度
+    latitude: 纬度
+    scale: 缩放级别
+    
+    longitude='{{longitude}}'
+
 
 
 

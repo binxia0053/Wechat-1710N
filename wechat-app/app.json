@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/map/map",
     "pages/ip/ip",
     "pages/weather/weather",
     "pages/index/index",
