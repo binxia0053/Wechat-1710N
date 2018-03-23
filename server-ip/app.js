@@ -5,7 +5,6 @@ let pool = mysql.createPool({user: 'root'});
 
 let app = new express();
 
-
 // Ctrl[+ Shift] + W(word)增(减)量选择
 app.get('/', (req, res) => {
     let ip = req.query.ip;
