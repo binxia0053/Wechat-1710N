@@ -17,11 +17,18 @@ Page({
 
   query: function () {
     let ip = this.data.ip;
-    let url = `http://127.0.0.1:3000/?ip=${ip}`;
+    let url = `http://5ad96e63.ngrok.io/?ip=${ip}`;
+    let page = this;
     wx.request({
       url: url,
       success: function (res) {
-        console.log(res);
+        let message = '请求失败';
+        if (res.data.status === 'ok') {
+          message = res.data.loc;
+        }
+        page.setData({
+          loc: message
+        });
       }
     });
   },
