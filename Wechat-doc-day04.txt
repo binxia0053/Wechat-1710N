@@ -1,0 +1,30 @@
+Wechat 开发
+
+Day04 小程序开发
+
+1.  下载 http://cz88.net 纯真 IP 地址数据库
+
+2.   实现小程序，根据用户输入的 IP，返回地理位置
+
+3.   软件界面点击“解压”，生成文本文件
+        起始IP    终止IP    地理位置
+
+4.   IP = Internet Protocal
+     A.B.C.D
+     [0, 255]
+     IPv4
+     IPv6
+
+5.   文件中的数据存入 MySQL 数据库，建库建表
+
+6.  server-ip/
+    cmd: npm init
+
+7.  server-ip/
+    cmd: npm i -S mysql express
+
+
+
+
+
+

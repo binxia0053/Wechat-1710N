@@ -92,7 +92,7 @@ Day03 小程序开发
          Hello，{{name}}！
     16.2 demo.js
          Page({
-            data: {
+            data:{
                 name: 'weapp'
             }
          });
@@ -158,7 +158,7 @@ Day03 小程序开发
 28. let url = `http://...location=${this.data.city}...`;
 
 29. wx.request({
-        url: '',
+        url: url,
         success: function(res) {
             console.log(res);
         }
