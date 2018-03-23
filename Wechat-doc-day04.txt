@@ -4,25 +4,31 @@ Day04 小程序开发
 
 1.  下载 http://cz88.net 纯真 IP 地址数据库
 
-2.   实现小程序，根据用户输入的 IP，返回地理位置
+2.  实现小程序，根据用户输入的 IP，返回地理位置
 
-3.   软件界面点击“解压”，生成文本文件
-        起始IP    终止IP    地理位置
-     转码 Notepad++
+3.  软件界面点击“解压”，生成文本文件
+       起始IP    终止IP    地理位置
+    转码 Notepad++ 菜单 - 编码 - 转为 UTF-8 编码
 
-4.   IP = Internet Protocal
-     A.B.C.D
-     [0, 255]
-     IPv4
-     IPv6
+4.  IP = Internet Protocol
+    A.B.C.D
+    [0, 255]
+    IPv4
+    IPv6
 
-5.   文件中的数据存入 MySQL 数据库，建库建表
+5.  文件中的数据存入 MySQL 数据库，建库建表
 
 6.  server-ip/
     cmd: npm init
 
 7.  server-ip/
     cmd: npm i -S mysql express
+
+8.  server-ip/data/
+    ip.data
+    dumpData.js
+
+
 
 
 
