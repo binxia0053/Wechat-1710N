@@ -8,6 +8,7 @@ Day04 小程序开发
 
 3.   软件界面点击“解压”，生成文本文件
         起始IP    终止IP    地理位置
+     转码 Notepad++
 
 4.   IP = Internet Protocal
      A.B.C.D
