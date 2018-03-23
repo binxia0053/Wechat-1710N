@@ -9,8 +9,8 @@ let dataPath = path.join(__dirname, 'ip.data');
 let eolRegExp =
     process.platform === 'win32' ? /\r\n/ : /\n/;
 
-let sql = `INSERT INTO db.ip
-            VALUE(NULL, ?, ?, ?)`;
+let sql = `INSERT INTO db.ip(min, max, loc)
+            VALUE(?, ?, ?)`;
 let counter = 0;
 fs.readFileSync(dataPath, 'UTF-8')
     .split(eolRegExp)
