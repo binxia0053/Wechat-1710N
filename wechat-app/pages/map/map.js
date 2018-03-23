@@ -25,12 +25,20 @@ Page({
             latitude: 40.6,
           },
           {
+            longitude: 116.0,
+            latitude: 39.7,
+          },
+          {
+            longitude: 116.6525,
+            latitude: 39.7,
+          },
+          {
             longitude: 116.3325,
-            latitude: 40.7,
+            latitude: 40.6,
           }
         ],
-        color: '#ff0000',
-        width: 1
+        color: '#00ff00',
+        width: 10
       }  
     ]
   },
