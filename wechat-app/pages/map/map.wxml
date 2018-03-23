@@ -3,4 +3,6 @@ longitude='{{longitude}}'
 latitude='{{latitude}}'
 scale='{{scale}}'
 markers='{{markers}}'
-polyline='{{polyline}}'></map>
+polyline='{{polyline}}'
+controls='{{controls}}'
+bindcontroltap='controlTap'></map>
