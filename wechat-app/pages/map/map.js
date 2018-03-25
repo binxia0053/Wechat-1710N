@@ -5,53 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    longitude: 117,
-    latitude: 40,
     scale: 10,
-    markers: [
-      {
-        longitude: 116.3325,
-        latitude: 40,
-        iconPath: '/resources/img/pin.png',
-        width: 20,
-        height: 30
-      }
-    ],
-    polyline: [
-      {
-        points: [
-          {
-            longitude: 116.3325,
-            latitude: 40.6,
-          },
-          {
-            longitude: 116.0,
-            latitude: 39.7,
-          },
-          {
-            longitude: 116.6525,
-            latitude: 39.7,
-          },
-          {
-            longitude: 116.3325,
-            latitude: 40.6,
-          }
-        ],
-        color: '#00ff00',
-        width: 10
-      }
-    ],
-    controls: [
-      {
-        id: 1,
-        position: {
-          left: 20,
-          top: 20
-        },
-        iconPath: '/resources/img/position.png',
-        clickable: true
-      }
-    ]
+    // polyline: [
+    //   {
+    //     points: [
+    //       {
+    //         longitude: 116.3325,
+    //         latitude: 40.6,
+    //       },
+    //       {
+    //         longitude: 116.0,
+    //         latitude: 39.7,
+    //       },
+    //       {
+    //         longitude: 116.6525,
+    //         latitude: 39.7,
+    //       },
+    //       {
+    //         longitude: 116.3325,
+    //         latitude: 40.6,
+    //       }
+    //     ],
+    //     color: '#00ff00',
+    //     width: 10
+    //   }
+    // ]
   },
 
   controlTap: function (event) {
@@ -63,6 +41,44 @@ Page({
             page.setData({
               longitude: res.longitude,
               latitude: res.latitude
+            });
+          },
+        });
+        break;
+      case 2:
+        let page = this;
+        wx.getLocation({
+          success: function (res) {
+            let longitude = res.longitude;
+            let latitude = res.latitude;
+            let url = `https://free-api.heweather.com/s6/weather/now?location=${longitude},${latitude}&key=fa66a4c393974639bcb6f2c06bf504b8`;
+            wx.request({
+              url: url,
+              success: function (res) {
+                let cond = res.data.HeWeather6[0].now.cond_txt;
+                let temp = res.data.HeWeather6[0].now.tmp;
+                let content = `天气:${cond}，温度:${temp}°C`;
+                page.setData({
+                  longitude: longitude,
+                  latitude: latitude,
+                  markers: [
+                    {
+                      longitude: longitude,
+                      latitude: latitude,
+                      iconPath: '/resources/img/pin.png',
+                      width: 20,
+                      height: 30,
+                      label: {
+                        content: content,
+                        bgColor:'#ffcccc',
+                        borderColor: '#ffffff',
+                        borderRadius: 3,
+                        borderWidth: 3
+                      }
+                    }
+                  ]
+                });
+              }
             });
           },
         });
@@ -81,16 +97,15 @@ Page({
     wx.getLocation({
       success: function (res) {
         page.setData({
+          longitude: res.longitude,
+          latitude: res.latitude,
           markers: [
             {
               longitude: res.longitude,
               latitude: res.latitude,
               iconPath: '/resources/img/pin.png',
               width: 20,
-              height: 30,
-              label: {
-                content: '晴，17C'
-              }
+              height: 30
             }
           ]
         });
@@ -109,6 +124,15 @@ Page({
                 top: res.windowHeight - 105
               },
               iconPath: '/resources/img/position.png',
+              clickable: true
+            },
+            {
+              id: 2,
+              position: {
+                left: 20,
+                top: res.windowHeight - 155
+              },
+              iconPath: '/resources/img/weather.png',
               clickable: true
             }
           ]
