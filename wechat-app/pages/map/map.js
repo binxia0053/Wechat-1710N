@@ -65,7 +65,7 @@ Page({
               latitude: res.latitude
             });
           },
-        })
+        });
         break;
       default:
         // ...
@@ -87,7 +87,10 @@ Page({
               latitude: res.latitude,
               iconPath: '/resources/img/pin.png',
               width: 20,
-              height: 30
+              height: 30,
+              label: {
+                content: '晴，17C'
+              }
             }
           ]
         });
