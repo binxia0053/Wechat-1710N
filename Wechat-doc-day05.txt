@@ -22,8 +22,33 @@ Day05 小程序开发
         }
     ]
 
-6. 添加一个 control
+6. 添加一个 control，id: 2
 
+7. 点击天气图标
+    7.1 wx.getLocation
+        longitude = res.longitude;
+        latitude = res.latitude;
+    7.2 let url = `...location=${longitude},${latitude}...`;
+        wx.request({
+            url: url,
+            success: function(res) {
+                let cond = res...;
+                let temp = res...;
+                let content = `cond:${cond},temp:${temp}`;
+                page.setData({
+                    longitude: longitude,
+                    latitude: latitude,
+                    markers: [
+                        {
+                            ...,
+                            label: {
+                                content: content
+                            }
+                        }
+                    ]
+                });
+            }
+        });
 
 
 
