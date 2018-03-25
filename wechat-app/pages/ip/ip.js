@@ -17,7 +17,7 @@ Page({
 
   query: function () {
     let ip = this.data.ip;
-    let url = `http://5ad96e63.ngrok.io/?ip=${ip}`;
+    let url = `http://127.0.0.1:3000/?ip=${ip}`;
     let page = this;
     wx.request({
       url: url,

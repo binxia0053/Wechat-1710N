@@ -5,13 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    longitude: 116.3325,
+    longitude: 117,
     latitude: 40,
-    scale: 14,
+    scale: 10,
     markers: [
       {
         longitude: 116.3325,
-        latitude: 40.5,
+        latitude: 40,
         iconPath: '/resources/img/pin.png',
         width: 20,
         height: 30
@@ -45,7 +45,7 @@ Page({
       {
         id: 1,
         position: {
-          left: 30,
+          left: 230,
           top: 30
         },
         iconPath: '/resources/img/position.png',
@@ -78,7 +78,9 @@ Page({
             {
               longitude: res.longitude,
               latitude: res.latitude,
-              iconPath: '/resources/img/pin.png'
+              iconPath: '/resources/img/pin.png',
+              width: 20,
+              height: 30
             }
           ]
         });

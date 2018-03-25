@@ -39,19 +39,22 @@ Day04 小程序开发
     TO to
     N number
 
-    SELECT *
+    SELECT loc
     FROM db.ip
     WHERE INET_ATON('用户输入的 IP')
     BETWEEN INET_ATON(min) AND INET_ATON(max);
 
 11. 小程序中创建新的页面 ip，设为首页
     <text>{{loc}}<text>
-    <input></input>
+    <input bindinput='getIp'></input>
     <button bindtap='query'></button>
 
 12. <input bindinput='getIp'></input>
 
 13. ip.js
+    data: {
+        ip: null
+    }
     getIp: function(event) {
         this.setData({
             ip: event.detail.value
@@ -75,6 +78,7 @@ Day04 小程序开发
 15. 创建新的页面：map
     <map></map>
 
+    width: 100%
     height: 100vh
 
 16. longitude: 经度
@@ -109,7 +113,11 @@ Day04 小程序开发
         {} // 其他折线
     ]
 
-19. 练习：点击定位控件，使地图的中心是当前用户所在位置
+19. controls
+
+20. wx.getLocation();
+
+21. 练习：点击定位控件，使地图的中心是当前用户所在位置
 
 
 
