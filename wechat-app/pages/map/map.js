@@ -45,8 +45,8 @@ Page({
       {
         id: 1,
         position: {
-          left: 230,
-          top: 30
+          left: 20,
+          top: 20
         },
         iconPath: '/resources/img/position.png',
         clickable: true
@@ -55,14 +55,22 @@ Page({
   },
 
   controlTap: function (event) {
-      switch(event.controlId) {
-        case 1:
-          console.log('1...');
-          break;
-        default:
-          // ...
-          break;
-      }
+    let page = this;
+    switch (event.controlId) {
+      case 1:
+        wx.getLocation({
+          success: function (res) {
+            page.setData({
+              longitude: res.longitude,
+              latitude: res.latitude
+            });
+          },
+        })
+        break;
+      default:
+        // ...
+        break;
+    }
   },
 
   /**
@@ -72,7 +80,6 @@ Page({
     let page = this;
     wx.getLocation({
       success: function (res) {
-        console.log(res);
         page.setData({
           markers: [
             {
@@ -85,7 +92,26 @@ Page({
           ]
         });
       },
-    })
+    });
+
+    wx.getSystemInfo({
+      success: function (res) {
+        // page.data.controls[0].position.top = res.windowHeight - 205;
+        page.setData({
+          controls: [
+            {
+              id: 1,
+              position: {
+                left: 20,
+                top: res.windowHeight - 105
+              },
+              iconPath: '/resources/img/position.png',
+              clickable: true
+            }
+          ]
+        });
+      },
+    });
   },
 
   /**

@@ -7,7 +7,9 @@ Day05 小程序开发
 
 2. wx.getLocation();
 
-3. 点击定位控件，使地图的中心是当前用户所在位置
+3. wx.getSystemInfo({success: function(res){ // ...}})；
+
+4. 点击定位控件，使地图的中心是当前用户所在位置
 
 
 
